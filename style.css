@@ -2,9 +2,16 @@
     clear: both;
 }
 
-#calculator {
-    margin-left: auto;
-    margin-right: auto;
+.orange {
+    background-color: rgb(240, 135, 66);
+}
+
+.grey {
+    background-color: rgb(186, 181, 178);
+}
+
+.white {
+    background-color: rgb(248, 244, 242);
 }
 
 p {
@@ -16,10 +23,20 @@ p {
     margin-bottom: auto;
 }
 
-#calculator .display {
+.number, .event-button, .clearout, .equals, .grey {
+    float: left;
+    font-family: lobster;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    border: solid;
+    box-sizing: border-box;
+}
+
+.display {
     border: thin;
     border-color: black;
-/*    box-sizing: border-box;*/
+    box-sizing: border-box;
     height: 100px;
     width: 200px;
     float: left;
@@ -27,88 +44,20 @@ p {
     background-color: black;
 }
 
-#calculator #zero {
+#zero {
     border: solid;
     box-sizing: border-box;
     height: 50px;
     width: 100px;
-    float: left;
     padding-left: 18.75px;
-    text-align: left; 
-    font-family: lobster;
-}
-
-#calculator .number {
-    border: solid;
-    box-sizing: border-box;
-    height: 50px;
-    width: 50px;
+    text-align: left;
     float: left;
-    text-align: center;
     font-family: lobster;
 }
 
-#calculator .event-button {
-    border: solid;
-    box-sizing: border-box;
-    height: 50px;
-    width: 50px;
-    float: left;
-    text-align: center;
-    font-family: lobster;
-}
-
-#calculator .clearout {
-    border: solid;
-    box-sizing: border-box;
-    height: 50px;
-    width: 50px;
-    float: left;
-    text-align: center;
-    font-family: lobster;
-}
-
-#calculator .equals {
-    border: solid;
-    box-sizing: border-box;
-    height: 50px;
-    width: 50px;
-    float: left;
-    text-align: center;
-    font-family: lobster;
-}
-
-#calculator .highlight {
+.highlight {
     border: solid;
     border-color: red;
-
-}
-
-#calculator .orange {
-    background-color: rgb(240, 135, 66);
-    
-}
-
-/*
-#calculator .grey {
-    background-color: rgb(186, 181, 178);
-}
-*/
-
-#calculator .grey {
-    background-color: rgb(186, 181, 178);
-    border: solid;
-    box-sizing: border-box;
-    height: 50px;
-    width: 50px;
-    float: left;
-    text-align: center;
-    font-family: lobster;
-}
-
-
-#calculator .white {
-    background-color: rgb(248, 244, 242);
 }
 
 .clicked {

@@ -1,162 +1,89 @@
-// TODO
-
-// Add functionality to middle top-row buttons
-// Make borders better when clicked
-// Create limiter for decimals
-// Block user from multiple operators
-        // Also consider allowing them to replace keyed operator with new operator
-        // Also ensure highlighter feature follows proper operator only
-
-
 $(document).ready(function() {
     
-
-    
+    // Initialize list to hold operators and numbers
     var calc_list = [];
-    var checker = [];
 
     
     
-    
+    // If a number is clicked
     $(".number").click(function() {
-        checker.push($(this).text());
-        console.log(checker);
- 
+        // Ensure previously selected event-button isnt highlighted
         $(".event-button").removeClass("highlight");
         
-        var number = $(this).text();
-        
-        calc_list.push(number);    
+        // Send the number we clicked on to the calc list array
+        calc_list.push($(this).text());    
+        // Join the calc list array into a string (ie, [1, +, 2] becomes 1+2)
         calc_list.join("");
-        
+        // Display calc list
         $(".display").html(calc_list);
         
     });
       
     
     
-    
-    
-    
-    
-    
-    
-    
-    
+    // If an operator (+-*/) is clicked
     $(".event-button").click(function() {
-    
-    
-    // Indented code below is in progress, doesn't seem like this is going to solve anything...
-//                    checker.push($(this).text());
-//                    console.log(checker);
-//
-//                    if (checker[checker.length-1] === checker[checker.length-2]) {
-//                        checker.pop();
-//                    }
-//
-//                    console.log(checker[checker.length-1]);
-//                    console.log(checker[checker.length-2]);
-    // See above comment for above code
-        
-        
-        
-        
-        var operator = $(this).text();
         
         $(this).addClass("highlight");
-
-        test5 = calc_list.join("");
-        
-        calc_list = [eval(test5)];
-   
+        // Send the operator symbol to the calc list
+        calc_list.push($(this).text()); 
+        // Join calc list together, evaluate the math inside, and set equal to calc list
+        calc_list = [eval(calc_list.join(""))];
+        // Display calc list
         $(".display").html(calc_list);
-        
-        calc_list.push(operator);    
+           
     });
     
     
     
-    
+    // Clear the display
     $(".clearout").click(function() {
-        checker.push($(this).text());
-        console.log(checker);
-        
+       
+        $(".event-button").removeClass("highlight");
+        // Set calc list equal to zero
         calc_list = [];
-        
+        // Send a "0" to the display so it isnt blank
         $(".display").html(0);
         
-        $(".event-button").removeClass("highlight");
     });
 
     
     
-    
+    // If we hit enter just evaluate the calc list
     $(".equals").click(function() {
-        checker.push($(this).text());
-        console.log(checker);
-        
-        test = calc_list.join("");
-        
-        $(".display").html(eval(test));    
-        
-        calc_list = [eval(test)];
         
         $(".event-button").removeClass("highlight");
+        calc_list = [eval(calc_list.join(""))];
+        $(".display").html(eval(calc_list.join("")));    
+        
     })
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    // If we hit the percent button just divide by 100
     $(".pct-button").click(function() {
-        checker.push("*");
-        checker.push(100);
-        
-        calc_list.push("*");
-        calc_list.push(100);
-        
-        console.log(checker);
-        
-        test = calc_list.join("");
-        
-        $(".display").html(eval(test)+"%");  
-        
-        
-        
-        calc_list = [eval(test)];
         
         $(".event-button").removeClass("highlight");
+        calc_list.push("/");
+        calc_list.push(100);
+        calc_list = [eval(calc_list.join(""))];
+        $(".display").html(eval(calc_list.join(""))+"%");  
+        
     });
     
     
     
-    
-    
-        $(".polarity-button").click(function() {
-        checker.push("*");
-        checker.push(-1);
+    // If we click the +/- button
+    $(".polarity-button").click(function() {
         
+        $(".event-button").removeClass("highlight");
         calc_list.push("*");
         calc_list.push(-1);
+        calc_list = [eval(calc_list.join(""))];
+        $(".display").html(eval(calc_list.join("")));    
         
-        console.log(checker);
-        
-        test = calc_list.join("");
-        
-        $(".display").html(eval(test));    
-        
-        calc_list = [eval(test)];
-        
-        $(".event-button").removeClass("highlight");
     });
+    
     
     
     
