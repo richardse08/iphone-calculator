@@ -2,6 +2,57 @@
     clear: both;
 }
 
+#iphone {
+	border: solid;
+	border-color: black;
+	border-width: 3px;
+	height: 450px;
+	width: 210px;
+	border-radius: 20px 20px 20px 20px;
+	box-shadow: 0px 59px 100px -19px #212121;
+	background-color: #212121;
+	margin-left: 50%;
+    margin-top: 50vh;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+#camera {
+	border: solid;
+	border-color: black;
+	border-width: 2px;
+	border-radius: 50%;
+	height: 5px;
+	width: 5px;
+	margin: 20px 10px 10px 60px;
+	float: left;
+}
+
+#speaker {
+	border: solid;
+	border-color: black;
+	border-width: 2px;
+	border-radius: 3px 3px 3px 3px;
+	height: 5px;
+	width: 45px;
+	margin: 20px 10px 10px 7px;
+	float: left;
+}
+
+#calculator {
+	margin: 50px 5px 5px 5px;
+}
+
+#home {
+	border: solid;
+	border-color: black;
+	border-width: 2px;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	margin: auto;
+}
+
 .orange {
     background-color: rgb(240, 135, 66);
 }
@@ -16,7 +67,7 @@
 
 p {
     color: white;
-    font-family: lobster;
+    font-family: helvetica;
     font-size: 48px;
     border: solid;
     margin-top: auto;
@@ -25,12 +76,14 @@ p {
 
 .number, .event-button, .clearout, .equals, .grey {
     float: left;
-    font-family: lobster;
+    font-family: helvetica;
     text-align: center;
+	padding-top: 12px;
     height: 50px;
     width: 50px;
     border: solid;
-    box-sizing: border-box;
+    box-sizing: border-box;    
+	
 }
 
 .display {
@@ -52,7 +105,7 @@ p {
     padding-left: 18.75px;
     text-align: left;
     float: left;
-    font-family: lobster;
+    font-family: helvetica;
 }
 
 .highlight {
