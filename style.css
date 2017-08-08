@@ -4,7 +4,8 @@
 
 #iphone {
 	border: solid;
-	border-color: black;
+	border-color: #433f3f;
+    border-style: inset;
 	border-width: 3px;
 	height: 450px;
 	width: 210px;
@@ -19,24 +20,28 @@
 
 #camera {
 	border: solid;
-	border-color: black;
-	border-width: 2px;
+	border-color: #191717;
+    border-style: inset;
+	border-width: 1px;
 	border-radius: 50%;
-	height: 5px;
-	width: 5px;
+	height: 5.5px;
+	width: 5.5px;
 	margin: 20px 10px 10px 60px;
 	float: left;
+    background-color: #393636;
 }
 
 #speaker {
 	border: solid;
-	border-color: black;
+	border-color: #191717;
+    border-style: inset;
 	border-width: 2px;
-	border-radius: 3px 3px 3px 3px;
+	border-radius: 4px 4px 4px 4px;
 	height: 5px;
 	width: 45px;
 	margin: 20px 10px 10px 7px;
 	float: left;
+    background-color: #242222;
 }
 
 #calculator {
@@ -45,12 +50,16 @@
 
 #home {
 	border: solid;
-	border-color: black;
-	border-width: 2px;
+	border-color: #433f3f;
+    border-style: inset;
+	border-width: 1px;
 	border-radius: 50%;
 	height: 40px;
 	width: 40px;
 	margin: auto;
+    background-color: #171717;
+    
+    
 }
 
 .orange {
